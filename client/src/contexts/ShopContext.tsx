@@ -51,7 +51,7 @@ if (
     });
     toast.success('나만의 컬러를 장바구니에 담았어요.', {
       description: product.name,
-      action: { label: '장바구니 보기', onClick: () => window.location.assign('/cart') },
+action: { label: '장바구니 보기', onClick: () => window.location.assign(`${import.meta.env.BASE_URL}cart`) },
     });
   }
   const changeQuantity = (key: string, delta: number) => setCart(current => current.map(item => item.key === key ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item));

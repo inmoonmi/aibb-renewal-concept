@@ -503,13 +503,13 @@ const categories = [
     <section className="quick-test" id="color-test">
       <div className="quick-categories">
         {categories.map(([label, image, koreanLabel]) => (
-  <a href={`/shop?category=${label.toLowerCase()}`} key={label}>
+  <Link href={`/shop?category=${label.toLowerCase()}`} key={label}>
     <span>
       <img src={`${A}/${image}`} alt="" />
     </span>
     <b>{label}</b>
     <small>{koreanLabel}</small>
-  </a>
+  </Link>
 ))}
       </div>
       <div className="test-banner">
@@ -868,7 +868,7 @@ function ColorTestModal({ close }: { close: () => void }) {
     setStep(step + 1)
   }
   const restart = () => { setAnswers({}); setStep(0) }
-  const save = () => { localStorage.setItem('aibb-color-result', JSON.stringify({ label: choiceLabel(answers), phrase: result?.phrase, products: result?.products.map(product => ({ ...product, image: recoImage[product.kind] })), savedAt: new Date().toISOString() })); window.location.assign('/mypage') }
+  const save = () => { localStorage.setItem('aibb-color-result', JSON.stringify({ label: choiceLabel(answers), phrase: result?.phrase, products: result?.products.map(product => ({ ...product, image: recoImage[product.kind] })), savedAt: new Date().toISOString() })); window.location.assign(`${import.meta.env.BASE_URL}mypage`) }
   const share = (channel: 'kakao' | 'x' | 'instagram') => {
     const text = `AIBB 컬러 테스트 결과: ${choiceLabel(answers)}`
     if (channel === 'kakao') navigator.clipboard?.writeText(text)
