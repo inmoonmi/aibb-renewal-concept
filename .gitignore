@@ -1,0 +1,18 @@
+# 설치·빌드 결과물 (npm install / npm run build 하면 다시 생겨요)
+node_modules/
+dist/
+
+# 로그
+*.log
+npm-debug.log*
+
+# 운영체제·에디터가 만드는 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 환경 변수
+.env
+.env.*
