@@ -429,10 +429,6 @@ h1, h2, h3, p { margin: 0; }
 .service-page h1 { font-size: 47px; font-weight: 650; letter-spacing: -1.4px; margin-top: 14px; }
 .service-page h1 > span { color: var(--brand-red); }
 
-/* 1240px 전후 화면에서도 주요 콘텐츠가 브라우저 가장자리에 붙지 않도록 합니다. */
-@media (min-width: 901px) { .event-page, .brand-page-new, .notice-page { width: calc(100% - 48px); box-sizing: border-box; } }
-@media (max-width: 900px) { .event-page, .brand-page-new, .notice-page { width: auto; } }
-
 
 /* =====================================================================
    6. 푸터
@@ -691,15 +687,15 @@ h1, h2, h3, p { margin: 0; }
 
   /* 푸터 */
   .footer-main { margin: 0 20px; padding: 31px 0 27px; gap: 20px; grid-template-columns: 1fr 1fr; }
-  .footer-main h3 { font-size: 8px; }
+  .footer-main h3 { font-size: 12px; }
   .footer-brand .wordmark { font-size: 26px; }
   .footer-brand .wordmark.logo-image { width: 83px; }
-  .footer-brand p { font-size: 10px; }
-  .footer-brand small { font-size: 8px; line-height: 1.5; max-width: 150px; }
+  .footer-brand p { font-size: 12px; }
+  .footer-brand small { font-size: 12px; line-height: 1.5; max-width: 150px; }
   .footer-phone { font-size: 21px; }
-  .footer-center p { font-size: 8px; }
-  .footer-pills a { font-size: 8px; padding: 5px 8px; gap: 6px; }
-  .footer-bottom { margin: 0 20px; flex-direction: column; align-items: flex-start; gap: 14px; font-size: 8px; }
+  .footer-center p { font-size: 12px; }
+  .footer-pills a { font-size: 12px; padding: 5px 8px; gap: 6px; }
+  .footer-bottom { margin: 0 20px; flex-direction: column; align-items: flex-start; gap: 14px; font-size: 12px; }
   .footer-bottom > div { gap: 16px; }
   .back-to-top { right: 15px; bottom: 17px; }
 
@@ -971,3 +967,7 @@ h1, h2, h3, p { margin: 0; }
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+
+/* 1240px 전후 화면에서도 주요 콘텐츠가 브라우저 가장자리에 붙지 않도록 합니다. */
+@media (min-width: 901px) { .event-page, .brand-page-new, .notice-page { width: calc(100% - 48px); box-sizing: border-box; } }
+@media (max-width: 900px) { .event-page, .brand-page-new, .notice-page { width: auto; } }
